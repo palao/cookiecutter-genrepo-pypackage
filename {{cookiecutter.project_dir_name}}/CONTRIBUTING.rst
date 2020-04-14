@@ -26,13 +26,13 @@ If you are reporting a bug, please include:
 Fix Bugs
 ~~~~~~~~
 
-Look through the {{ cookiecutter.repo_host }} issues for bugs. Anything tagged with "bug" and "help
+Look through the {{ cookiecutter.repo_base_url }} issues for bugs. Anything tagged with "bug" and "help
 wanted" is open to whoever wants to implement it.
 
 Implement Features
 ~~~~~~~~~~~~~~~~~~
 
-Look through the {{ cookiecutter.repo_host }} issues for features. Anything tagged with "enhancement"
+Look through the {{ cookiecutter.repo_base_url }} issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
 Write Documentation
@@ -62,7 +62,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 1. Fork the `{{ cookiecutter.project_slug }}` repo on {{ cookiecutter.repo_host }}.
 2. Clone your fork locally::
 
-    $ git clone git@{{ cookiecutter.repo_host.lower }}.com:{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}.git
+    $ git clone git@{{ cookiecutter.repo_host.lower() }}.com:{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
