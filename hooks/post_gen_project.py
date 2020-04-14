@@ -20,3 +20,8 @@ if __name__ == '__main__':
 
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
+
+    if 'GNU General Public License v3' == '{{ cookiecutter.open_source_license }}':
+        remove_file('LICENSE')
+    else:
+        remove_file('COPYING')
