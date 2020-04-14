@@ -1,19 +1,16 @@
-======================
-Cookiecutter PyPackage
-======================
+============================================
+Cookiecutter PyPackage for generic repo host
+============================================
 
-.. image:: https://pyup.io/repos/github/audreyr/cookiecutter-pypackage/shield.svg
-     :target: https://pyup.io/repos/github/audreyr/cookiecutter-pypackage/
-     :alt: Updates
+Yet another Cookiecutter_ template for a Python package, forked from 
+the wonderful Cookiecutter-pypackage_ from Audrey Feldroy, but with generic
+repository hosting.
 
-.. image:: https://travis-ci.org/audreyr/cookiecutter-pypackage.svg?branch=master
-    :target: https://travis-ci.org/audreyr/cookiecutter-pypackage
-
-Cookiecutter_ template for a Python package.
-
-* GitHub repo: https://github.com/audreyr/cookiecutter-pypackage/
-* Documentation: https://cookiecutter-pypackage.readthedocs.io/
+* GitHub repo: https://github.com/palao/cookiecutter-genrepo-pypackage/
 * Free software: BSD license
+
+.. _Cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage/
+
 
 Features
 --------
@@ -28,20 +25,6 @@ Features
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 
-Build Status
--------------
-
-Linux:
-
-.. image:: https://img.shields.io/travis/audreyr/cookiecutter-pypackage.svg
-    :target: https://travis-ci.org/audreyr/cookiecutter-pypackage
-    :alt: Linux build status on Travis CI
-
-Windows:
-
-.. image:: https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter-pypackage?branch=master&svg=true
-    :target: https://ci.appveyor.com/project/audreyr/cookiecutter-pypackage/branch/master
-    :alt: Windows build status on Appveyor
 
 Quickstart
 ----------
@@ -53,7 +36,7 @@ Cookiecutter 1.4.0 or higher)::
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    cookiecutter https://github.com/palao/cookiecutter-genrepo-pypackage.git
 
 Then:
 
@@ -76,10 +59,6 @@ For more details, see the `cookiecutter-pypackage tutorial`_.
 
 .. _`cookiecutter-pypackage tutorial`: https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html
 
-Not Exactly What You Want?
---------------------------
-
-Don't worry, you have options:
 
 Similar Cookiecutter Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,6 +80,7 @@ Similar Cookiecutter Templates
 * Also see the `network`_ and `family tree`_ for this repo. (If you find
   anything that should be listed here, please add it and send a pull request!)
 
+  
 Fork This / Create Your Own
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -114,6 +94,7 @@ be a fork.
 * It's up to you whether or not to rename your fork/own version. Do whatever
   you think sounds good.
 
+  
 Or Submit a Pull Request
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
