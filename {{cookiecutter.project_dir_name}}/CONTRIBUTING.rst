@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at {{ cookiecutter.repo_host }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}{% if cookiecutter.repo_host == 'GitHub' -%}/issues{% elif cookiecutter.repo_host == 'GitLab' %}/-/issues{% endif %}.
+Report bugs at {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}{% if cookiecutter.repo_host == 'GitHub' -%}/issues{% elif cookiecutter.repo_host == 'GitLab' %}/-/issues{% endif %}.
 
 If you are reporting a bug, please include:
 
@@ -26,13 +26,13 @@ If you are reporting a bug, please include:
 Fix Bugs
 ~~~~~~~~
 
-Look through the {{ cookiecutter.repo_base_url }} issues for bugs. Anything tagged with "bug" and "help
+Look through the {{ cookiecutter.repo_host }} issues for bugs. Anything tagged with "bug" and "help
 wanted" is open to whoever wants to implement it.
 
 Implement Features
 ~~~~~~~~~~~~~~~~~~
 
-Look through the {{ cookiecutter.repo_base_url }} issues for features. Anything tagged with "enhancement"
+Look through the {{ cookiecutter.repo_host }} issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
 Write Documentation
