@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for {{ cookiecutter.project_name }} can be downloaded from the `Github repo`_.
+The sources for {{ cookiecutter.project_name }} can be downloaded from the `{{ cookiecutter.repo_host}} repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+    $ git clone git://{{ cookiecutter.repo_host.lower() }}.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/tarball/master
+    $ curl -OJL {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-.. _tarball: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/tarball/master
+.. _{{ cookiecutter.repo_host}} repo: {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}
+.. _tarball: {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/tarball/master
