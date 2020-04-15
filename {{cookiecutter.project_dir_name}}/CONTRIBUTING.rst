@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}{% if cookiecutter.repo_host == 'GitHub' -%}/issues{% elif cookiecutter.repo_host == 'GitLab' %}/-/issues{% endif %}.
+Report bugs at {{ cookiecutter.repo_base_url }}/{{ cookiecutter.path_on_repo_host }}{% if cookiecutter.repo_host == 'GitHub' -%}/issues{% elif cookiecutter.repo_host == 'GitLab' %}/-/issues{% endif %}.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}{% if cookiecutter.repo_host == 'GitHub' -%}/issues{% elif cookiecutter.repo_host == 'GitLab' %}/-/issues{% endif %}.
+The best way to send feedback is to file an issue at {{ cookiecutter.repo_base_url }}/{{ cookiecutter.path_on_repo_host }}{% if cookiecutter.repo_host == 'GitHub' -%}/issues{% elif cookiecutter.repo_host == 'GitLab' %}/-/issues{% endif %}.
 
 If you are proposing a feature:
 
@@ -57,12 +57,12 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for local development.
+Ready to contribute? Here's how to set up `{{ cookiecutter.project_dir_name }}` for local development.
 
 1. Fork the `{{ cookiecutter.project_slug }}` repo on {{ cookiecutter.repo_host }}.
 2. Clone your fork locally::
 
-    $ git clone git@{{ cookiecutter.repo_host.lower() }}.com:{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}.git
+    $ git clone git@{{ cookiecutter.repo_host.lower() }}.com:{{ cookiecutter.path_on_repo_host }}.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
@@ -102,9 +102,11 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and for PyPy. Check
-   https://travis-ci.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/pull_requests
-   and make sure that the tests pass for all supported Python versions.
+3. The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and for PyPy.
+   You can run run `tox` for that.
+
+   {% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}- Or, even better, check https://travis-ci.com/{{ cookiecutter.path_on_repo_host }}/pull_requests
+     and make sure that the tests pass for all supported Python versions.{%- endif %}
 
 Tips
 ----

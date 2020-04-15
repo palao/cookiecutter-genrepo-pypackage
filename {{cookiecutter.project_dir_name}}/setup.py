@@ -61,7 +61,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='{{ cookiecutter.repo_base_url}}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}',
+    url='{{ cookiecutter.repo_base_url}}/{{ cookiecutter.path_on_repo_host }}',
     version='{{ cookiecutter.version }}',
     zip_safe=False,
 )

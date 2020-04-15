@@ -3,20 +3,21 @@ Cookiecutter PyPackage for generic repo host
 ============================================
 
 Yet another Cookiecutter_ template for a Python package, forked from 
-the wonderful Cookiecutter-pypackage_ from Audrey Feldroy, but with generic
-repository hosting.
+the wonderful Cookiecutter-pypackage_ from `Audrey Feldroy`_, but with generic
+repository hosting plus some other little customizations.
 
 * GitHub repo: https://github.com/palao/cookiecutter-genrepo-pypackage/
 * Free software: BSD license
 
 .. _Cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage/
-
+.. _`Audrey Feldroy`: https://github.com/audreyr
 
 Features
 --------
 
+* Can choose between GitHub and GitLab for hosting
 * Testing setup with ``unittest`` and ``python setup.py test`` or ``pytest``
-* Travis-CI_: Ready for Travis Continuous Integration testing
+* Travis-CI_: Ready for Travis Continuous Integration testing (only for GitHub projects)
 * Tox_ testing: Setup to easily test for Python 3.5, 3.6, 3.7, 3.8
 * Sphinx_ docs: Documentation ready for generation with, for example, `Read the Docs`_
 * bump2version_: Pre-configured version bumping with a single command
