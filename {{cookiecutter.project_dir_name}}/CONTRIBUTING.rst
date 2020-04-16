@@ -120,6 +120,7 @@ Tips
 To run a subset of tests::
 
 {% if cookiecutter.use_pytest == 'y' -%}
+
     $ pytest tests/unit/{{ cookiecutter.project_slug }}
 
 or::
