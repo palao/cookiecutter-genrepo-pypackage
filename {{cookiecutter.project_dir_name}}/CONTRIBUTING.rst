@@ -9,6 +9,7 @@ helps, and credit will always be given.
 
 You can contribute in many ways:
 
+
 Types of Contributions
 ----------------------
 
@@ -23,17 +24,19 @@ If you are reporting a bug, please include:
 * Any details about your local setup that might be helpful in troubleshooting.
 * Detailed steps to reproduce the bug.
 
+
 Fix Bugs
 ~~~~~~~~
 
 Look through the {{ cookiecutter.repo_host }} issues for bugs. Anything tagged with "bug" and "help
 wanted" is open to whoever wants to implement it.
 
+
 Implement Features
 ~~~~~~~~~~~~~~~~~~
 
-Look through the {{ cookiecutter.repo_host }} issues for features. Anything tagged with "enhancement"
-and "help wanted" is open to whoever wants to implement it.
+Look through the {{ cookiecutter.repo_host }} issues for features. Anything tagged with
+"enhancement" and "help wanted" is open to whoever wants to implement it.
 
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
@@ -53,6 +56,7 @@ If you are proposing a feature:
 * Keep the scope as narrow as possible, to make it easier to implement.
 * Remember that this is a volunteer-driven project, and that contributions
   are welcome :)
+
 
 Get Started!
 ------------
@@ -93,6 +97,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_dir_name }}` 
 
 7. Submit a pull request through the {{ cookiecutter.repo_host }} website.
 
+
 Pull Request Guidelines
 -----------------------
 
@@ -103,10 +108,11 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and for PyPy.
-   You can run run `tox` for that.
 
-   {% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}- Or, even better, check https://travis-ci.com/{{ cookiecutter.path_on_repo_host }}/pull_requests
-     and make sure that the tests pass for all supported Python versions.{%- endif %}
+   {% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}- check https://travis-ci.com/{{ cookiecutter.path_on_repo_host }}/pull_requests
+     and make sure that the tests pass for all supported Python versions.
+   {% else %} - You can ensure that the tests pass using `tox`.{%- endif %}
+
 
 Tips
 ----
@@ -114,10 +120,15 @@ Tips
 To run a subset of tests::
 
 {% if cookiecutter.use_pytest == 'y' -%}
-    $ pytest tests.test_{{ cookiecutter.project_slug }}
+    $ pytest tests/unit/{{ cookiecutter.project_slug }}
+
+or::
+
+    $ pytest tests/unit/{{ cookiecutter.project_slug }}/test_{{ cookiecutter.project_slug }}.py
 {% else %}
-    $ python -m unittest tests.test_{{ cookiecutter.project_slug }}
+    $ python -m unittest tests.unit.test_{{ cookiecutter.project_slug }}/test_{{ cookiecutter.project_slug }}
 {%- endif %}
+
 
 Deploying
 ---------

@@ -25,3 +25,4 @@ if __name__ == '__main__':
         remove_file('LICENSE')
     else:
         remove_file('COPYING')
+        remove_file("devel/template.py")
