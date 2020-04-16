@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://{{ cookiecutter.repo_host.lower() }}.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}
+    $ git clone git://{{ cookiecutter.repo_host.lower() }}.com/{{ cookiecutter.path_on_repo_host }}
 
-Or download the `tarball`_:
+Or download the {% if cookiecutter.repo_host == 'GitLab' -%}tarball{% elif cookiecutter == 'GitHub' %}`tarball`_{%- endif %}:
 
 .. code-block:: console
 
-    $ curl -OJL {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/tarball/master
+    $ curl -OJL {{ cookiecutter.repo_base_url }}/{{ cookiecutter.path_on_repo_host }}/{% if cookiecutter.repo_host == 'GitLab' -%}-/archive/master/{{ cookiecutter.project_slug }}-{% elif cookiecutter == 'GitHub' %}archive/{%- endif %}master.zip
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _{{ cookiecutter.repo_host}} repo: {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}
-.. _tarball: {{ cookiecutter.repo_base_url }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/tarball/master
+.. _{{ cookiecutter.repo_host}} repo: {{ cookiecutter.repo_base_url }}/{{ cookiecutter.path_on_repo }}
+{% if cookiecutter.repo_host == 'GitHub' -%}.. _tarball: {{ cookiecutter.repo_base_url }}/{{ cookiecutter.path_on_repo }}/tarball/master{%- endif %}
