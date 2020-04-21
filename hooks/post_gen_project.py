@@ -26,3 +26,8 @@ if __name__ == '__main__':
     else:
         remove_file('COPYING')
         remove_file("devel/template.py")
+
+    if "{{ cookiecutter.repo_host }}" != 'GitLab':
+        remove_file('.gitlab-ci.yml')
+    if "{{ cookiecutter.repo_host }}" != 'GitHub':
+        remove_file('.travis.yml')
